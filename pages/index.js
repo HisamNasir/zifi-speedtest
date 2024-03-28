@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import Sidebar from "@/components/Sidebar";
 import { Lato } from "next/font/google";
 import { motion } from "framer-motion";
-
+import { AnimatePresence } from "framer-motion";
 const inter = Lato({
   subsets: ["latin"],
   weight: "100",
@@ -53,7 +53,7 @@ export default function Home() {
           <div className="flex max-h-min justify-end items-center">
             <>
               <p className=" text-6xl md:text-8xl lg:text-[200px] 2xl:text-[343px] p-0 leading-none pb-10 ">
-                {speed}
+                {Math.floor(parseFloat(speed))}
               </p>
 
               <div className=" flex flex-col justify-center gap-2 lg:gap-6 2xl:gap-8">
@@ -82,7 +82,7 @@ export default function Home() {
             </>
           </div>
           {speed === "105.31" && (
-            <div>
+            <AnimatePresence>
               {showMoreInfo ? (
                 <Sidebar
                   toggleMoreInfo={toggleMoreInfo}
@@ -98,7 +98,7 @@ export default function Home() {
                   More Information
                 </p>
               )}
-            </div>
+            </AnimatePresence>
           )}
         </div>
       </Layout>
