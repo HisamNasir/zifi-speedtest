@@ -7,7 +7,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
   return (
     <div className="h-full absolute top-0 left-0  z-10 w-full bg-opacity-90 flex flex-col justify-between min-h-screen py-4 md:py-6 2xl:py-[40px] px-6 md:px-8 2xl:px-[50px] bg-black ">
       <Header />
-      <div className=" h-full 2xl:py-[40px] my-2 max-h-[80vh] overflow-auto">
+      <div className=" h-full py-[30px] 2xl:py-[40px] my-2 max-h-[80vh] overflow-auto">
         <div className="flex max-md:flex-col items-center justify-between w-full h-full ">
           {/* left side  */}
           <div className=" w-full h-full flex flex-col  justify-between 3xl:gap-12 text-xs lg:text-sm 2xl:text-xl">
@@ -35,7 +35,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]">
                 <img
                   src="/Logos-icons/ZIFI User Icon.png"
-                  className="  h-[30px] max-w-[30px] md:h-auto md:max-w-[40px]  lg:max-w-[40px] 2xl:max-w-[50px] "
+                  className="  h-[30px] max-w-[30px] 2xl:max-w-[50px] "
                 />
               </div>
               <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
@@ -62,7 +62,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]">
                 <img
                   src="/Logos-icons/ZIFI WiFi Icon W.png"
-                  className=" max-h-[30px] max-w-[30px] md:max-h-[35px] md:max-w-[40px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  h-auto"
+                  className=" max-h-[30px] max-w-[35px] md:max-h-[35px] 2xl:max-h-[50px] 2xl:max-w-[50px]  h-auto"
                 />
               </div>
               <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
