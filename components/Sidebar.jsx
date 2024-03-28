@@ -103,7 +103,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
             </div>
           </div>
           {/* right side  */}
-          <div className=" flex md:flex-col max-sm:mt-8 gap-4 lg:gap-8 2xl:gap-14 items-end w-full ">
+          <div className=" flex max-md:justify-center md:flex-col max-sm:mt-8 gap-4 lg:gap-8 2xl:gap-14 items-end w-full ">
             <div id="download">
               <div className="flex items-center">
                 <p className="text-4xl md:text-[80px] lg:text-[120px] 2xl:text-[176px] leading-none">
