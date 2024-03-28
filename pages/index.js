@@ -47,7 +47,7 @@ export default function Home() {
 
   return (
     <main>
-      <Layout className="">
+      <Layout>
         <div className=" h-full">
           <div className="flex max-h-min justify-end items-center">
             <>
@@ -81,7 +81,7 @@ export default function Home() {
             </>
           </div>
           {speed === "105.31" && (
-            <div>
+            <div className=" ">
               {showMoreInfo ? (
                 <Sidebar
                   toggleMoreInfo={toggleMoreInfo}
@@ -90,12 +90,14 @@ export default function Home() {
                   handleClose={handleCloseSidebar}
                 />
               ) : (
-                <p
-                  onClick={toggleMoreInfo}
-                  className=" text-xs md:text-base lg:text-xl 2xl:text-xl flex justify-end cursor-pointer mt-10"
-                >
-                  More Information
-                </p>
+                <div className="relative">
+                  <p
+                    onClick={toggleMoreInfo}
+                    className="absolute right-0 text-xs md:text-base lg:text-xl 2xl:text-xl flex justify-end cursor-pointer mt-10"
+                  >
+                    More Information
+                  </p>
+                </div>
               )}
             </div>
           )}
