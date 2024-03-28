@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import Layout from "@/components/Layout";
-import { Inter } from "next/font/google";
+import Sidebar from "@/components/Sidebar";
+import { Lato } from "next/font/google";
 import { motion } from "framer-motion";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Lato({
+  subsets: ["latin"],
+  weight: "100",
+});
 
 export default function Home() {
   const [speed, setSpeed] = useState("0");
@@ -11,6 +15,11 @@ export default function Home() {
   const [buttonImage, setButtonImage] = useState(
     "/Logos-icons/ZIFI Circle Test.png"
   );
+  const [showSpeedDisplay, setShowSpeedDisplay] = useState(true);
+  const [speedDisplayStyle, setSpeedDisplayStyle] = useState({
+    zIndex: 0,
+    opacity: 1,
+  });
 
   const handleButtonClick = () => {
     setButtonImage("/Logos-icons/ZIFI Circle Download Green.png");
@@ -28,51 +37,63 @@ export default function Home() {
       }
     }, 20); // Speed increase interval of 200 milliseconds
   };
-
+  const handleCloseSidebar = () => {
+    setShowMoreInfo(false);
+    // Additional logic to reset speed or perform any other actions upon closing the sidebar
+  };
   const toggleMoreInfo = () => {
     setShowMoreInfo(!showMoreInfo);
+    setShowSpeedDisplay(!showSpeedDisplay); // Toggle visibility of speed display
   };
 
   return (
     <main>
-      <Layout>
-        <div>
-          <div className="flex max-h-min  justify-end items-center">
-            <p className=" 2xl:text-[293pt] p-0 mr-4">{speed}</p>
-            <div className=" flex flex-col justify-center gap-8">
-              <p className=" normal-case 2xl:text-[44px]">Mbps</p>
-              <motion.button
-                whileTap={{ scale: 0.9 }}
-                onClick={handleButtonClick}
-              >
-                {buttonImage === "/Logos-icons/ZIFI Circle Test.png" && (
-                  <p className=" flex justify-center items-center absolute uppercase 2xl:text-[27px] 2xl:w-[113px] 2xl:h-[113px]">
-                    Go
-                  </p>
-                )}
-                <motion.img
-                  src={buttonImage}
-                  alt="Button"
-                  className=" 2xl:w-[113px] 2xl:h-[113px] absolute"
-                  id="imageButton"
-                />
-              </motion.button>
-            </div>
+      <Layout className="">
+        <div className=" h-full">
+          <div className="flex max-h-min justify-end items-center">
+            <>
+              <p className=" text-8xl lg:text-[200px] 2xl:text-[293px] p-0 ">
+                {speed}
+              </p>
+
+              <div className=" flex flex-col justify-center gap-2 lg:gap-6 2xl:gap-8">
+                <p className=" normal-case text-[25px] lg:tex-[35px] 2xl:text-[44px]">
+                  Mbps
+                </p>
+                <button
+                  onClick={handleButtonClick}
+                  className=" h-full relative"
+                >
+                  <div className=" absolute">
+                    {buttonImage === "/Logos-icons/ZIFI Circle Test.png" && (
+                      <p className=" flex justify-center items-center  uppercase lg:text-xl 2xl:text-[27px] w-[40px] lg:w-[80px] 2xl:w-[113px] h-[40px] lg:h-[80px] 2xl:h-[113px]">
+                        Go
+                      </p>
+                    )}
+                  </div>
+                  <img
+                    src={buttonImage}
+                    alt="Button"
+                    className="w-[40px] lg:w-[80px] 2xl:w-[113px] h-[40px] lg:h-[80px] 2xl:h-[113px] "
+                    id="imageButton"
+                  />
+                </button>
+              </div>
+            </>
           </div>
           {speed === "105.31" && (
             <div>
               {showMoreInfo ? (
-                <motion.div
-                  initial={{ x: "-100%" }}
-                  animate={{ x: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <p>More Info: Lorem ipsum dolor sit amet.</p>
-                </motion.div>
+                <Sidebar
+                  toggleMoreInfo={toggleMoreInfo}
+                  speed={speed}
+                  setSpeed={setSpeed}
+                  handleClose={handleCloseSidebar}
+                />
               ) : (
                 <p
                   onClick={toggleMoreInfo}
-                  className=" flex justify-end cursor-pointer"
+                  className=" flex justify-end cursor-pointer mt-10"
                 >
                   More Information
                 </p>

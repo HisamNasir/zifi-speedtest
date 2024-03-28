@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
-import getCountryCode from "../lib/getCountryCode";
 import { hasFlag } from "country-flag-icons";
+import getCountryCode from "../lib/getCountryCode";
 
 const CountryFlag = () => {
   const [countryCode, setCountryCode] = useState(null);
+
   useEffect(() => {
     const fetchCountryCode = async () => {
       try {
-        const code = await getCountryCode();
-        setCountryCode(code);
+        let storedCountryCode = localStorage.getItem("countryCode");
+        if (!storedCountryCode) {
+          const code = await getCountryCode();
+          storedCountryCode = code;
+          localStorage.setItem("countryCode", code);
+        }
+        setCountryCode(storedCountryCode);
       } catch (error) {
         console.error("Error fetching country code:", error);
       }
@@ -19,13 +25,11 @@ const CountryFlag = () => {
   return (
     <>
       {countryCode && hasFlag(countryCode) && (
-        <div className=" aspect-square overflow-hidden">
-          <img
-            className=" rounded-md h-8 md:h-11 2xl:h-[50px] aspect-square overflow-hidden bg-white "
-            alt={countryCode}
-            src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${countryCode}.svg`}
-          />
-        </div>
+        <img
+          className=" h-[35px] w-[40px] lg:h-[40px] lg:w-[40px] 2xl:h-[50px] 2xl:w-[50px] rounded-xl 2xl:rounded-2xl  bg-white"
+          alt={countryCode}
+          src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${countryCode}.svg`}
+        />
       )}
     </>
   );
