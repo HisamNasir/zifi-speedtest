@@ -52,12 +52,12 @@ export default function Home() {
         <div className=" h-full">
           <div className="flex max-h-min justify-end items-center">
             <>
-              <p className=" text-8xl lg:text-[200px] 2xl:text-[293px] p-0 ">
+              <p className=" text-6xl md:text-8xl lg:text-[200px] 2xl:text-[343px] p-0 leading-none pb-10 ">
                 {speed}
               </p>
 
               <div className=" flex flex-col justify-center gap-2 lg:gap-6 2xl:gap-8">
-                <p className=" normal-case text-[25px] lg:tex-[35px] 2xl:text-[44px]">
+                <p className=" normal-case text-lg md:text-[25px] lg:tex-[35px] 2xl:text-[44px]">
                   Mbps
                 </p>
                 <button
@@ -66,7 +66,7 @@ export default function Home() {
                 >
                   <div className=" absolute">
                     {buttonImage === "/Logos-icons/ZIFI Circle Test.png" && (
-                      <p className=" flex justify-center items-center  uppercase lg:text-xl 2xl:text-[27px] w-[40px] lg:w-[80px] 2xl:w-[113px] h-[40px] lg:h-[80px] 2xl:h-[113px]">
+                      <p className=" flex justify-center items-center  uppercase lg:text-xl 2xl:text-[35px] w-[40px] lg:w-[80px] 2xl:w-[130px] h-[40px] lg:h-[80px] 2xl:h-[130px]">
                         Go
                       </p>
                     )}
@@ -74,7 +74,7 @@ export default function Home() {
                   <img
                     src={buttonImage}
                     alt="Button"
-                    className="w-[40px] lg:w-[80px] 2xl:w-[113px] h-[40px] lg:h-[80px] 2xl:h-[113px] "
+                    className="w-[40px] lg:w-[80px] 2xl:w-[130px] h-[40px] lg:h-[80px] 2xl:h-[130px] "
                     id="imageButton"
                   />
                 </button>
@@ -93,7 +93,7 @@ export default function Home() {
               ) : (
                 <p
                   onClick={toggleMoreInfo}
-                  className=" flex justify-end cursor-pointer mt-10"
+                  className=" text-xs md:text-base lg:text-xl 2xl:text-xl flex justify-end cursor-pointer mt-10"
                 >
                   More Information
                 </p>
