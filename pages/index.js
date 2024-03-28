@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import Sidebar from "@/components/Sidebar";
 import { Lato } from "next/font/google";
-import { motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
+
 const inter = Lato({
   subsets: ["latin"],
   weight: "100",
@@ -82,7 +81,7 @@ export default function Home() {
             </>
           </div>
           {speed === "105.31" && (
-            <AnimatePresence>
+            <div>
               {showMoreInfo ? (
                 <Sidebar
                   toggleMoreInfo={toggleMoreInfo}
@@ -98,7 +97,7 @@ export default function Home() {
                   More Information
                 </p>
               )}
-            </AnimatePresence>
+            </div>
           )}
         </div>
       </Layout>
