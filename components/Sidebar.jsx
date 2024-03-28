@@ -21,7 +21,8 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               <p>more information</p>
               <button className=" w-fit" onClick={handleClose}>
                 <img
-                  src="/Logos-icons/back.svg"
+                  src=""
+                  alt="BACK"
                   className=" w-[20px] 2xl:w-[30px] h-auto"
                 />
               </button>
