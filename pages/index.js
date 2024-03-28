@@ -12,7 +12,7 @@ export default function Home() {
   const [speed, setSpeed] = useState("0");
   const [showMoreInfo, setShowMoreInfo] = useState(false);
   const [buttonImage, setButtonImage] = useState(
-    "/Logos-icons/ZIFI Circle Test.png"
+    "/Logos-icons/ZIFI Circle Test.svg"
   );
   const [showSpeedDisplay, setShowSpeedDisplay] = useState(true);
   const [speedDisplayStyle, setSpeedDisplayStyle] = useState({
@@ -21,7 +21,7 @@ export default function Home() {
   });
 
   const handleButtonClick = () => {
-    setButtonImage("/Logos-icons/ZIFI Circle Download Green.png");
+    setButtonImage("/Logos-icons/ZIFI Circle Download Green.svg");
 
     let initialSpeed = 0;
     const interval = setInterval(() => {
@@ -31,7 +31,7 @@ export default function Home() {
       if (initialSpeed >= 105.31) {
         clearInterval(interval);
         setTimeout(() => {
-          setButtonImage("/Logos-icons/ZIFI Circle Test.png");
+          setButtonImage("/Logos-icons/ZIFI Circle Test.svg");
         }, 2000); // Delay for 2 seconds before switching back to the original button image
       }
     }, 20); // Speed increase interval of 200 milliseconds
@@ -64,7 +64,7 @@ export default function Home() {
                   className=" h-full relative"
                 >
                   <div className=" absolute">
-                    {buttonImage === "/Logos-icons/ZIFI Circle Test.png" && (
+                    {buttonImage === "/Logos-icons/ZIFI Circle Test.svg" && (
                       <p className=" flex justify-center items-center  uppercase lg:text-xl 2xl:text-[35px] w-[40px] lg:w-[80px] 2xl:w-[130px] h-[40px] lg:h-[80px] 2xl:h-[130px]">
                         Go
                       </p>

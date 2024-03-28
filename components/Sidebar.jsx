@@ -21,7 +21,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               <p>more information</p>
               <button className=" w-fit" onClick={handleClose}>
                 <img
-                  src="/Logos-icons/back.png"
+                  src="/Logos-icons/back.svg"
                   className=" w-[20px] 2xl:w-[30px] h-auto"
                 />
               </button>
@@ -41,7 +41,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               <div className=" flex  max-md:flex-col gap-4 lg:gap-8 2xl:gap-10 items-center">
                 <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]">
                   <img
-                    src="/Logos-icons/ZIFI User Icon.png"
+                    src="/Logos-icons/ZIFI User Icon.svg"
                     className="  h-[30px] max-w-[30px] 2xl:max-w-[50px] "
                   />
                 </div>
@@ -68,7 +68,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               <div className=" flex  max-md:flex-col gap-4 lg:gap-8 2xl:gap-10 items-center">
                 <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]">
                   <img
-                    src="/Logos-icons/ZIFI WiFi Icon W.png"
+                    src="/Logos-icons/ZIFI WiFi Icon W.svg"
                     className=" max-h-[30px] max-w-[35px] md:max-h-[35px] 2xl:max-h-[50px] 2xl:max-w-[50px]  h-auto"
                   />
                 </div>
@@ -121,7 +121,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                       Mbps
                     </p>
                     <img
-                      src="/Logos-icons/ZIFI Download Arrow Green.png"
+                      src="/Logos-icons/ZIFI Download Arrow Green.svg"
                       className=" max-h-[20px] max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  "
                     />
                   </div>
@@ -140,7 +140,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                       Mbps
                     </p>
                     <img
-                      src="/Logos-icons/ZIFI Upload Arrow Purple.png"
+                      src="/Logos-icons/ZIFI Upload Arrow Purple.svg"
                       className=" max-h-[20px] max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px] "
                     />
                   </div>

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className=" grid grid-flow-col items-center">
       <img
-        src="/Logos-icons/ZiFi W.png"
+        src="/Logos-icons/ZiFi W.svg"
         width={96}
         height={50}
         className=" w-auto h-6 sm:h-6 md:h-8 2xl:h-[50px]"
