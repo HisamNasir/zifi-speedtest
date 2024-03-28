@@ -10,6 +10,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
       initial={{ opacity: 0 }} // Initial opacity value for fade-in animation
       animate={{ opacity: 1 }} // Target opacity value for fade-in animation
       exit={{ opacity: 0 }} // Target opacity value for fade-out animation
+      transition={{ duration: 0.5 }}
     >
       <div className="h-full absolute top-0 left-0  z-10 w-full bg-opacity-90 flex flex-col justify-between min-h-screen py-4 md:py-6 2xl:py-[40px] px-6 md:px-8 2xl:px-[50px] bg-black ">
         <Header />
