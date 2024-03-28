@@ -26,7 +26,7 @@ const CountryFlag = () => {
     <>
       {countryCode && hasFlag(countryCode) && (
         <img
-          className=" h-[30px] w-[30px] md:h-[35px] md:w-[40px] lg:h-[40px] lg:w-[40px] 2xl:h-[50px] 2xl:w-[50px] rounded-xl 2xl:rounded-2xl  bg-white"
+          className=" h-[30px] w-[30px] md:h-[35px] md:w-[40px] lg:h-[40px] lg:w-[40px] 2xl:h-[50px] 2xl:w-[50px] rounded-xl 2xl:rounded-2xl  overflow-hidden object-cover "
           alt={countryCode}
           src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${countryCode}.svg`}
         />
