@@ -10,7 +10,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
       <div className=" h-full 2xl:py-[40px] my-2 max-h-[80vh] overflow-auto">
         <div className="flex max-md:flex-col items-center justify-between w-full h-full ">
           {/* left side  */}
-          <div className=" w-full h-full flex flex-col gap-4 lg:gap-10 2xl:gap-0 2xl:justify-between 3xl:gap-12 text-xs lg:text-lg 2xl:text-xl">
+          <div className=" w-full h-full flex flex-col  justify-between 3xl:gap-12 text-xs lg:text-sm 2xl:text-xl">
             <p>more information</p>
             <button className=" w-fit" onClick={handleClose}>
               <img
@@ -22,7 +22,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]">
                 <CountryFlag />
               </div>
-              <div className="grid grid-cols-2 gap-2 2xl:gap-4 gap-x-10 2xl:gap-x-20">
+              <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
                 <div className=" opacity-50 w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                   city
                 </div>
@@ -38,7 +38,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                   className="  h-[30px] max-w-[30px] md:h-auto md:max-w-[40px]  lg:max-w-[40px] 2xl:max-w-[50px] "
                 />
               </div>
-              <div className="grid grid-cols-2 gap-2 2xl:gap-4 gap-x-10 2xl:gap-x-20">
+              <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
                 <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                   LATITUDE
                 </div>
@@ -65,7 +65,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                   className=" max-h-[30px] max-w-[30px] md:max-h-[35px] md:max-w-[40px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  h-auto"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-2 2xl:gap-4 gap-x-10 2xl:gap-x-20">
+              <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
                 <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                   PROVIDER
                 </div>
@@ -90,7 +90,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
             </div>
             <div className=" flex  max-md:flex-col gap-4 lg:gap-8 2xl:gap-14 items-center">
               <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]"></div>
-              <div className="grid grid-cols-2 gap-2 2xl:gap-4 gap-x-10 2xl:gap-x-20">
+              <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
                 <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                   DATE
                 </div>
