@@ -17,7 +17,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
         <div className=" h-full max-lg:py-[30px] max-lg:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col items-center justify-between w-full h-full ">
             {/* left side  */}
-            <div className=" w-full h-full flex flex-col  justify-around text-xs lg:text-sm 2xl:text-xl 2xl:pb-8">
+            <div className=" w-full h-full flex flex-col  justify-around text-xs lg:text-sm 2xl:text-xl 2xl:pb-4">
               <p className=" opacity-50">more information</p>
               <button className=" w-fit" onClick={handleClose}>
                 <img
