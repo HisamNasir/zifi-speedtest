@@ -14,10 +14,10 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
     >
       <div className="h-full absolute top-0 left-0  z-10 w-full md:bg-opacity-90 flex flex-col justify-between min-h-screen pb-[24px] pt-[12px] md:py-6 2xl:py-[40px] px-[18px] md:px-8 2xl:px-[50px] bg-black ">
         <Header handleClose={handleClose} />
-        <div className=" h-full max-lg:py-[30px] md:my-2 max-h-[80vh] overflow-auto">
+        <div className=" h-full max-lg:py-[30px] max-md:pb-[0px] md:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col-reverse items-center justify-between w-full h-full ">
             {/* left side  */}
-            <div className=" w-full h-full flex flex-col  justify-around text-[10px] md:text-xs lg:text-sm 2xl:text-xl 2xl:pb-4">
+            <div className=" w-full h-full flex flex-col max-md:mt-2 justify-between  md:justify-around text-[10px] md:text-xs lg:text-sm 2xl:text-xl 2xl:pb-4">
               <p className="hidden md:block opacity-50">more information</p>
               <button className=" hidden md:block" onClick={handleClose}>
                 <img
@@ -30,7 +30,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                 <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]">
                   <CountryFlag />
                 </div>
-                <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
+                <div className="grid grid-cols-2 gap-[2px] md:gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
                   <div className=" opacity-50 w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     city
                   </div>
@@ -46,7 +46,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                     className="w-full h-auto max-w-[25px] md:max-h-[35px] 2xl:max-h-[50px] 2xl:max-w-[50px]"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
+                <div className="grid grid-cols-2 gap-[2px] md:gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
                   <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     LATITUDE
                   </div>
@@ -77,7 +77,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                     className="w-full h-auto max-w-[25px] md:max-h-[35px] 2xl:max-h-[50px] 2xl:max-w-[50px]"
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
+                <div className="grid grid-cols-2 gap-[2px] md:gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
                   <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     PROVIDER
                   </div>
@@ -98,7 +98,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               </div>
               <div className=" flex md:gap-4 lg:gap-0 items-center">
                 <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]"></div>
-                <div className="grid grid-cols-2 gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
+                <div className="grid grid-cols-2 gap-[2px] md:gap-1 2xl:gap-4 gap-x-10 2xl:gap-x-20">
                   <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     DATE
                   </div>
@@ -111,7 +111,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               </div>
             </div>
             {/* right side  */}
-            <div className=" flex max-md:justify-center max-md:items-center flex-col max-md:mt-2 gap-4 lg:gap-8 2xl:gap-10 items-end w-full ">
+            <div className=" flex max-md:justify-center max-md:items-center flex-col max-md:my-4 max-md:mb-8 gap-4 lg:gap-8 2xl:gap-10 items-end w-full ">
               <div id="download">
                 <div className="flex max-md:flex-col max-md:justify-center md:items-center leading-none">
                   <p className="text-[108px] md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
