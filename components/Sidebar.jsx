@@ -17,7 +17,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
         <div className=" h-full max-lg:py-[30px] max-md:pb-[0px] md:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col-reverse items-center justify-between w-full h-full ">
             {/* left side  */}
-            <div className=" w-full h-full flex flex-col max-md:mt-2 justify-between  md:justify-around text-[10px] md:text-xs lg:text-sm 2xl:text-xl 2xl:pb-4">
+            <div className=" w-full h-full flex flex-col max-md:mt-2 justify-between  md:justify-around text-[9px] sm:text-[11px] md:text-xs lg:text-sm 2xl:text-xl 2xl:pb-4">
               <p className="hidden md:block opacity-50">more information</p>
               <button className=" hidden md:block" onClick={handleClose}>
                 <img
@@ -114,19 +114,19 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
             <div className=" flex max-md:justify-center max-md:items-center flex-col max-md:my-4 max-md:mb-8 gap-4 lg:gap-8 2xl:gap-10 items-end w-full ">
               <div id="download">
                 <div className="flex max-md:flex-col max-md:justify-center md:items-center leading-none">
-                  <p className="text-[108px] md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
+                  <p className=" text-6xl sm:text-6xl sm:text-[108px] md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
                     {speed}
                   </p>
-                  <p className=" md:hidden block text-center text-xs md:text-sm lg:text-lg 2xl:text-xl mt-2">
+                  <p className=" md:hidden block text-center text-[9px] pb-1 sm:text-xs md:text-sm lg:text-lg 2xl:text-xl mt-2">
                     download
                   </p>
                   <div className=" flex max-md:flex-row-reverse max-md:justify-center md:flex-col gap-2 2xl:gap-8 lx:mt-2 2xl:mt-4 items-center">
-                    <p className=" normal-case text-[38px] md:text-[15px] lg:tex-[20px] 2xl:text-[26px]">
+                    <p className=" normal-case text-md sm:text-md sm:text-[38px] md:text-[15px] lg:tex-[20px] 2xl:text-[26px]">
                       Mbps
                     </p>
                     <img
                       src="/Logos-icons/ZIFI Download Arrow Green.svg"
-                      className=" max-h-[27px] w-auto md:max-h-[20px] md:max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  "
+                      className=" h-3 sm:h-3 sm:max-h-[27px] w-auto md:max-h-[20px] md:max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  "
                     />
                   </div>
                 </div>
@@ -136,19 +136,19 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               </div>
               <div id="upload">
                 <div className="flex max-md:flex-col max-md:justify-center md:items-center leading-none">
-                  <p className="text-[108px] md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
+                  <p className="text-6xl sm:text-[108px] md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
                     {speed}
                   </p>
-                  <p className=" md:hidden block text-center text-xs md:text-sm lg:text-lg 2xl:text-xl mt-2">
+                  <p className=" md:hidden block text-center text-[9px] pb-1 sm:text-xs md:text-sm lg:text-lg 2xl:text-xl mt-2">
                     upload
                   </p>
                   <div className=" flex max-md:flex-row-reverse max-md:justify-center md:flex-col gap-2 2xl:gap-8 lx:mt-2 2xl:mt-4 items-center">
-                    <p className=" normal-case text-[38px] md:text-[15px] lg:tex-[20px] 2xl:text-[26px]">
+                    <p className=" normal-case text-md sm:text-[38px] md:text-[15px] lg:tex-[20px] 2xl:text-[26px]">
                       Mbps
                     </p>
                     <img
                       src="/Logos-icons/ZIFI Upload Arrow Purple.svg"
-                      className=" max-h-[27px] w-auto md:max-h-[20px] md:max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  "
+                      className=" h-3 sm:max-h-[27px] w-auto md:max-h-[20px] md:max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  "
                     />
                   </div>
                 </div>
