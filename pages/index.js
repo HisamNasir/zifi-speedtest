@@ -49,9 +49,9 @@ export default function Home() {
     <main>
       <Layout>
         <div className=" h-full">
-          <div className="flex max-h-min justify-end items-center">
+          <div className="flex max-h-min justify-center md:justify-end items-center">
             <>
-              <p className=" text-6xl md:text-8xl lg:text-[200px] 2xl:text-[343px] p-0 leading-none pb-10 ">
+              <p className=" text-[120px] md:text-[150px] lg:text-[200px] 2xl:text-[343px] p-0 leading-none md:pb-10">
                 {Math.floor(parseFloat(speed))}
               </p>
 
