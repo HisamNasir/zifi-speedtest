@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 
-const ParentComponent = () => {
+const SidebarStatus = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const handleCloseSidebar = () => {
@@ -11,10 +11,10 @@ const ParentComponent = () => {
 
   return (
     <div>
-      <Header handleClose={handleCloseSidebar} />
-      {sidebarOpen && <Sidebar handleClose={handleCloseSidebar} />}
+      <Header handleClose={handleCloseSidebar} isSidebarOpen={sidebarOpen} />
+      <Sidebar handleClose={handleCloseSidebar} />
     </div>
   );
 };
 
-export default ParentComponent;
+export default SidebarStatus;

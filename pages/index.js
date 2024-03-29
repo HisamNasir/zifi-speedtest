@@ -15,10 +15,6 @@ export default function Home() {
     "/Logos-icons/ZIFI Circle Test.svg"
   );
   const [showSpeedDisplay, setShowSpeedDisplay] = useState(true);
-  const [speedDisplayStyle, setSpeedDisplayStyle] = useState({
-    zIndex: 0,
-    opacity: 1,
-  });
 
   const handleButtonClick = () => {
     setButtonImage("/Logos-icons/ZIFI Circle Download Green.svg");

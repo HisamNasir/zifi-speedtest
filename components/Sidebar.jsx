@@ -12,14 +12,14 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
       exit={{ opacity: 0 }} // Target opacity value for fade-out animation
       transition={{ duration: 0.5 }}
     >
-      <div className="h-full absolute top-0 left-0  z-10 w-full bg-opacity-90 flex flex-col justify-between min-h-screen pb-[24px] pt-[12px] md:py-6 2xl:py-[40px] px-[18px] md:px-8 2xl:px-[50px] bg-black ">
+      <div className="h-full absolute top-0 left-0  z-10 w-full md:bg-opacity-90 flex flex-col justify-between min-h-screen pb-[24px] pt-[12px] md:py-6 2xl:py-[40px] px-[18px] md:px-8 2xl:px-[50px] bg-black ">
         <Header handleClose={handleClose} />
         <div className=" h-full max-lg:py-[30px] max-lg:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col items-center justify-between w-full h-full ">
             {/* left side  */}
             <div className=" w-full h-full flex flex-col  justify-around text-xs lg:text-sm 2xl:text-xl 2xl:pb-4">
               <p className=" opacity-50">more information</p>
-              <button className=" w-fit" onClick={handleClose}>
+              <button className=" hidden md:block" onClick={handleClose}>
                 <img
                   src="/Logos-icons/Arrow Back W Web.svg"
                   alt="BACK"
