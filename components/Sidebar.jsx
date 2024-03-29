@@ -136,7 +136,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               </div>
               <div id="upload">
                 <div className="flex max-md:flex-col max-md:justify-center md:items-center leading-none">
-                  <p className="text-6xl sm:text-[108px] md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
+                  <p className="text-6xl sm:text-6xl sm:text-[108px] md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
                     {speed}
                   </p>
                   <p className=" md:hidden block text-center text-[9px] pb-1 sm:text-xs md:text-sm lg:text-lg 2xl:text-xl mt-2">
