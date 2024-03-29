@@ -17,7 +17,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
         <div className=" h-full max-lg:py-[30px] max-lg:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col items-center justify-between w-full h-full ">
             {/* left side  */}
-            <div className=" w-full h-full flex flex-col  2xl:justify-around  3xl:gap-12 text-xs lg:text-sm 2xl:text-xl 2xl:pb-8">
+            <div className=" w-full h-full flex flex-col  justify-around text-xs lg:text-sm 2xl:text-xl 2xl:pb-8">
               <p className=" opacity-50">more information</p>
               <button className=" w-fit" onClick={handleClose}>
                 <img
@@ -63,6 +63,10 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                     EXTERNAL IP
                   </div>
                   <div className="">82.41.174.63</div>
+                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                    MAC ADDRESS
+                  </div>
+                  <div className="">5D:C3:07:7A:C4:88</div>
                 </div>
               </div>
 
@@ -90,10 +94,6 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                     PING
                   </div>
                   <div className=" normal-case">12 ms</div>
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
-                    MAC ADDRESS
-                  </div>
-                  <div className="">5D:C3:07:7A:C4:88</div>
                 </div>
               </div>
               <div className=" flex  max-md:flex-col gap-4 lg:gap-0 items-center">
@@ -111,7 +111,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               </div>
             </div>
             {/* right side  */}
-            <div className=" flex max-md:justify-center md:flex-col max-sm:mt-8 gap-4 lg:gap-8 2xl:gap-14 items-end w-full ">
+            <div className=" flex max-md:justify-center md:flex-col max-sm:mt-8 gap-4 lg:gap-8 2xl:gap-12 items-end w-full ">
               <div id="download">
                 <div className="flex items-center">
                   <p className="text-4xl md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
