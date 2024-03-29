@@ -8,7 +8,7 @@ const inter = Lato({
   weight: "100",
 });
 
-export default function Home({ showMoreInfo, toggleMoreInfo }) {
+export default function Home() {
   const [speed, setSpeed] = useState("0");
   const [showMoreInfo, setShowMoreInfo] = useState(false);
   const [buttonImage, setButtonImage] = useState(
