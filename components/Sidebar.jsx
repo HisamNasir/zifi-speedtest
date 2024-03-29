@@ -117,7 +117,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                   <p className="text-4xl md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
                     {speed}
                   </p>
-                  <div className=" flex flex-col gap-2 2xl:gap-6 items-center">
+                  <div className=" flex flex-col gap-2 2xl:gap-8 lx:mt-2 2xl:mt-4 items-center">
                     <p className=" normal-case text-xs md:text-[15px] lg:tex-[20px] 2xl:text-[26px]">
                       Mbps
                     </p>
@@ -136,7 +136,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
                   <p className=" text-4xl md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
                     {speed}
                   </p>
-                  <div className=" flex flex-col gap-2 2xl:gap-6 items-center">
+                  <div className=" flex flex-col gap-2 2xl:gap-8 lx:mt-2 2xl:mt-4 items-center">
                     <p className=" normal-case text-xs md:text-[15px] lg:tex-[20px] 2xl:text-[26px]">
                       Mbps
                     </p>
