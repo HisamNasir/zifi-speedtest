@@ -60,7 +60,7 @@ export default function Home() {
               </p>
               <div className=" block md:hidden ">
                 {speed === "105.31" && (
-                  <div>
+                  <div className="h-[16px]">
                     {showMoreInfo ? (
                       <Sidebar
                         toggleMoreInfo={toggleMoreInfo}
