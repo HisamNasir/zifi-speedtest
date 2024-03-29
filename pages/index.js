@@ -93,7 +93,7 @@ export default function Home() {
                 <div className="relative">
                   <p
                     onClick={toggleMoreInfo}
-                    className="absolute right-0 text-xs md:text-base lg:text-xl 2xl:text-xl flex justify-end cursor-pointer mt-10"
+                    className="absolute right-0 text-xs md:text-base lg:text-xl 2xl:text-xl flex justify-end cursor-pointer mt-10 opacity-50 hover:opacity-100 transition-opacity duration-500"
                   >
                     More Information
                   </p>
