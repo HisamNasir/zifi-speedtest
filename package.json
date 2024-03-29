@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.2",
     "axios": "^1.6.8",
     "country-flag-icons": "^1.5.10",
     "framer-motion": "^11.0.22",
