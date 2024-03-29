@@ -30,8 +30,11 @@ const Header = ({ handleClose, isSidebarOpen }) => {
           <CountryFlag />
         </div>
       </div>
-      <div className="absolute w-full text-center md:hidden block text-xs md:text-sm">
-        your internet speed
+      <div
+        id="changeingtext"
+        className="absolute w-full text-center md:hidden block text-xs md:text-sm"
+      >
+        {isSidebarOpen ? "more information" : "your internet speed"}
       </div>
     </div>
   );
