@@ -14,10 +14,10 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
     >
       <div className="h-full absolute top-0 left-0  z-10 w-full bg-opacity-90 flex flex-col justify-between min-h-screen py-4 md:py-6 2xl:py-[40px] px-6 md:px-8 2xl:px-[50px] bg-black ">
         <Header />
-        <div className=" h-full py-[30px] 2xl:py-[40px] my-2 max-h-[80vh] overflow-auto">
+        <div className=" h-full max-lg:py-[30px] max-lg:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col items-center justify-between w-full h-full ">
             {/* left side  */}
-            <div className=" w-full h-full flex flex-col  justify-between 3xl:gap-12 text-xs lg:text-sm 2xl:text-xl">
+            <div className=" w-full h-full flex flex-col  2xl:justify-around  3xl:gap-12 text-xs lg:text-sm 2xl:text-xl 2xl:pb-8">
               <p className=" opacity-50">more information</p>
               <button className=" w-fit" onClick={handleClose}>
                 <img
@@ -114,7 +114,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
             <div className=" flex max-md:justify-center md:flex-col max-sm:mt-8 gap-4 lg:gap-8 2xl:gap-14 items-end w-full ">
               <div id="download">
                 <div className="flex items-center">
-                  <p className="text-4xl md:text-[80px] lg:text-[120px] 2xl:text-[176px] leading-none">
+                  <p className="text-4xl md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
                     {speed}
                   </p>
                   <div className=" flex flex-col gap-2 2xl:gap-6 items-center">
@@ -133,7 +133,7 @@ const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
               </div>
               <div id="upload">
                 <div className="flex items-center">
-                  <p className=" text-4xl md:text-[80px] lg:text-[120px] 2xl:text-[176px] leading-none">
+                  <p className=" text-4xl md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
                     {speed}
                   </p>
                   <div className=" flex flex-col gap-2 2xl:gap-6 items-center">
