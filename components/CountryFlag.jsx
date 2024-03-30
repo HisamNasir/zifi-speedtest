@@ -17,11 +17,11 @@ const CountryFlag = () => {
   return (
     <div className=" ">
       {countryCode && hasFlag(countryCode) && (
-        <div>
+        <div className="h-[25px] w-[25px] md:h-[35px] md:w-[35px] 2xl:h-[50px] 2xl:w-[50px]">
           <Image
             className=" aspect-square rounded-md object-cover"
-            width={25}
-            height={25}
+            width={50}
+            height={50}
             alt={countryCode}
             src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${countryCode}.svg`}
           />
