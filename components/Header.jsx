@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CountryFlag from "./CountryFlag";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../store/sidebarSlice";
@@ -7,10 +7,27 @@ import { selectIsSidebarOpen } from "../store/sidebarSlice";
 const Header = () => {
   const dispatch = useDispatch();
   const sidebarOpen = useSelector(selectIsSidebarOpen);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768); // 768px is the breakpoint for 'md'
+    };
+
+    // Initial check
+    handleResize();
+
+    // Event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleCloseSidebar = () => {
     dispatch(toggleSidebar());
   };
+
   return (
     <div className="relative max-md:space-y-[44px] ">
       <div className=" grid grid-flow-col items-center">
@@ -33,8 +50,12 @@ const Header = () => {
             className=" w-auto h-[25px] md:h-8 2xl:h-[50px]"
           />
         </div>
-        <div className=" text-center hidden md:block  text-xs  md:text-sm">
-          {sidebarOpen ? "More Information" : "Your internet speed"}
+        <div className="text-center hidden md:block text-xs md:text-sm">
+          {isSmallScreen
+            ? sidebarOpen
+              ? "More Information"
+              : "Your internet speed"
+            : "Your internet speed"}
         </div>
         <div className=" flex justify-end">
           <CountryFlag />
@@ -44,7 +65,11 @@ const Header = () => {
         id="changeingtext"
         className="absolute w-full text-center md:hidden block text-xs md:text-sm"
       >
-        {sidebarOpen ? "More Information" : "Your internet speed"}
+        {isSmallScreen
+          ? sidebarOpen
+            ? "More Information"
+            : "Your internet speed"
+          : "Your internet speed"}
       </div>
     </div>
   );

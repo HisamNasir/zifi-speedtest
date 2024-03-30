@@ -40,6 +40,8 @@ const useLocationData = () => {
           year,
           date: formattedDate,
           time: formattedTime,
+          latitude,
+          longitude,
         });
       } catch (error) {
         console.error("Error fetching data:", error);

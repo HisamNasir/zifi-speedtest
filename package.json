@@ -11,6 +11,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.2",
     "axios": "^1.6.8",
+    "clsx": "^2.1.0",
     "country-flag-icons": "^1.5.10",
     "framer-motion": "^11.0.22",
     "next": "14.1.4",

@@ -5,6 +5,8 @@ import CountryFlag from "./CountryFlag";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar, selectIsSidebarOpen } from "../store/sidebarSlice";
+import Time from "./InternetInformation/Time";
+import Date from "./InternetInformation/Date";
 
 const Sidebar = ({ speed }) => {
   const dispatch = useDispatch();
@@ -112,11 +114,15 @@ const Sidebar = ({ speed }) => {
                   <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     DATE
                   </div>
-                  <div className="">27/03/2024</div>
+                  <div className="">
+                    <Date />
+                  </div>
                   <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     TIME
                   </div>
-                  <div className="">15:45</div>
+                  <div className="">
+                    <Time />
+                  </div>
                 </div>
               </div>
             </div>
