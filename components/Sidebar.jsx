@@ -20,7 +20,6 @@ const Sidebar = ({ speed }) => {
   const handleCloseSidebar = () => {
     dispatch(toggleSidebar());
   };
-  console.log("Sidebar Open:", sidebarOpen);
 
   return (
     <motion.div
