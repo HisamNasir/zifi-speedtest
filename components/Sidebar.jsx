@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar, selectIsSidebarOpen } from "../store/sidebarSlice";
 import Time from "./InternetInformation/Time";
 import Date from "./InternetInformation/Date";
+import ShortDate from "./InternetInformation/ShortDate";
 
 const Sidebar = ({ speed }) => {
   const dispatch = useDispatch();
@@ -115,7 +116,7 @@ const Sidebar = ({ speed }) => {
                     DATE
                   </div>
                   <div className="">
-                    <Date />
+                    <ShortDate />
                   </div>
                   <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     TIME
