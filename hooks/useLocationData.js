@@ -25,15 +25,14 @@ const useLocationData = () => {
             year: "numeric",
             month: "long",
             day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
           };
           const formattedDate = currentDate.toLocaleDateString(
             undefined,
             options
           );
-          const formattedTime = currentDate.toLocaleTimeString([], {
-            hour: "2-digit",
-            minute: "2-digit",
-          });
+          const formattedTime = currentDate.toLocaleTimeString([], options);
           const [weekday, day, month, year] = formattedDate.split(/,\s|\s/);
           const newData = {
             city,

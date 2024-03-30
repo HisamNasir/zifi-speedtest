@@ -1,16 +1,16 @@
 import React from "react";
-import useLocationData from "../../hooks/useLocationData";
 
 const Time = () => {
-  const locationData = useLocationData();
+  const currentDate = new Date();
+  const hours = currentDate.getHours();
+  const minutes = currentDate.getMinutes();
+  const formattedTime = `${hours < 10 ? "0" + hours : hours}:${
+    minutes < 10 ? "0" + minutes : minutes
+  }`;
 
   return (
     <div>
-      {locationData ? (
-        <span>{locationData.time}</span>
-      ) : (
-        <span>Loading...</span>
-      )}
+      <span>{formattedTime}</span>
     </div>
   );
 };
