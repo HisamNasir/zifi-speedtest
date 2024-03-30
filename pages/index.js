@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import Sidebar from "@/components/Sidebar";
 import { Lato } from "next/font/google";
-
+import { useDispatch, useSelector } from "react-redux";
+import { toggleSidebar, selectIsSidebarOpen } from "../store/sidebarSlice";
 const inter = Lato({
   subsets: ["latin"],
   weight: "100",
 });
-
 export default function Home() {
   const [speed, setSpeed] = useState("0");
   const [showMoreInfo, setShowMoreInfo] = useState(false);
@@ -15,30 +15,30 @@ export default function Home() {
     "/Logos-icons/ZIFI Circle Test.svg"
   );
   const [showSpeedDisplay, setShowSpeedDisplay] = useState(true);
+  const dispatch = useDispatch();
+  const sidebarOpen = useSelector(selectIsSidebarOpen);
+
+  const handleToggleSidebar = () => {
+    dispatch(toggleSidebar());
+  };
 
   const handleButtonClick = () => {
     setButtonImage("/Logos-icons/ZIFI Circle Download Green.svg");
-
     let initialSpeed = 0;
     const interval = setInterval(() => {
-      initialSpeed += 1.0; // Increment by 1.00
-      const roundedSpeed = Math.min(initialSpeed, 105.31).toFixed(2); // Limit speed to 105.31 and round to two decimal places
+      initialSpeed += 1.0;
+      const roundedSpeed = Math.min(initialSpeed, 105.31).toFixed(2);
       setSpeed(roundedSpeed);
       if (initialSpeed >= 105.31) {
         clearInterval(interval);
         setTimeout(() => {
           setButtonImage("/Logos-icons/ZIFI Circle Test.svg");
-        }, 2000); // Delay for 2 seconds before switching back to the original button image
+        }, 2000);
       }
-    }, 20); // Speed increase interval of 200 milliseconds
-  };
-  const handleCloseSidebar = () => {
-    setShowMoreInfo(false);
-    // Additional logic to reset speed or perform any other actions upon closing the sidebar
+    }, 20);
   };
   const toggleMoreInfo = () => {
-    setShowMoreInfo(!showMoreInfo);
-    setShowSpeedDisplay(!showSpeedDisplay); // Toggle visibility of speed display
+    dispatch(toggleSidebar()); // Open sidebar when showing information
   };
 
   return (
@@ -57,14 +57,7 @@ export default function Home() {
               <div className=" block md:hidden ">
                 {speed === "105.31" && (
                   <div className="h-[16px]">
-                    {showMoreInfo ? (
-                      <Sidebar
-                        toggleMoreInfo={toggleMoreInfo}
-                        speed={speed}
-                        setSpeed={setSpeed}
-                        handleClose={handleCloseSidebar}
-                      />
-                    ) : (
+                    {!sidebarOpen && (
                       <div className=" w-full ">
                         <p
                           onClick={toggleMoreInfo}
@@ -74,6 +67,7 @@ export default function Home() {
                         </p>
                       </div>
                     )}
+                    {sidebarOpen && <Sidebar speed={speed} />}
                   </div>
                 )}
               </div>
@@ -100,13 +94,8 @@ export default function Home() {
           <div className=" hidden md:block">
             {speed === "105.31" && (
               <div className=" ">
-                {showMoreInfo ? (
-                  <Sidebar
-                    toggleMoreInfo={toggleMoreInfo}
-                    speed={speed}
-                    setSpeed={setSpeed}
-                    handleClose={handleCloseSidebar}
-                  />
+                {sidebarOpen ? (
+                  <Sidebar speed={speed} />
                 ) : (
                   <div className="relative">
                     <p

@@ -1,25 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import CountryFlag from "./CountryFlag";
 import { motion } from "framer-motion";
-const Sidebar = ({ toggleMoreInfo, speed, setSpeed, handleClose }) => {
+import { useDispatch, useSelector } from "react-redux";
+import { toggleSidebar, selectIsSidebarOpen } from "../store/sidebarSlice";
+
+const Sidebar = ({ speed }) => {
+  const dispatch = useDispatch();
+  const sidebarOpen = useSelector(selectIsSidebarOpen);
+
+  const handleCloseSidebar = () => {
+    dispatch(toggleSidebar());
+  };
+  console.log("Sidebar Open:", sidebarOpen);
+
   return (
     <motion.div
-      className="sidebar"
-      initial={{ opacity: 0 }} // Initial opacity value for fade-in animation
-      animate={{ opacity: 1 }} // Target opacity value for fade-in animation
-      exit={{ opacity: 0 }} // Target opacity value for fade-out animation
+      className={`sidebar ${sidebarOpen ? "" : "hidden"}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="h-full absolute top-0 left-0  z-10 w-full md:bg-opacity-90 flex flex-col justify-between min-h-screen pb-[24px] pt-[12px] md:py-6 2xl:py-[40px] px-[18px] md:px-8 2xl:px-[50px] bg-black ">
-        <Header handleClose={handleClose} />
+        <Header handleCloseSidebar={handleCloseSidebar} />
         <div className=" h-full max-lg:py-[30px] max-md:pb-[0px] md:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col-reverse items-center justify-between w-full h-full ">
-            {/* left side  */}
             <div className=" w-full h-full flex flex-col max-md:mt-2 justify-between  md:justify-around text-[9px] sm:text-[11px] md:text-xs lg:text-sm 2xl:text-xl 2xl:pb-4">
               <p className="hidden md:block opacity-50">more information</p>
-              <button className=" hidden md:block" onClick={handleClose}>
+              <button className=" hidden md:block" onClick={handleCloseSidebar}>
                 <img
                   src="/Logos-icons/Arrow Back W Web.svg"
                   alt="BACK"
