@@ -8,6 +8,10 @@ import { toggleSidebar, selectIsSidebarOpen } from "../store/sidebarSlice";
 import Time from "./InternetInformation/Time";
 import Date from "./InternetInformation/Date";
 import ShortDate from "./InternetInformation/ShortDate";
+import Longitude from "./InternetInformation/Longitude";
+import Latitude from "./InternetInformation/Latitude";
+import Country from "./InternetInformation/Country";
+import City from "./InternetInformation/City";
 
 const Sidebar = ({ speed }) => {
   const dispatch = useDispatch();
@@ -47,9 +51,13 @@ const Sidebar = ({ speed }) => {
                   <div className=" opacity-50 w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     city
                   </div>
-                  <div className="">london</div>
+                  <div className="">
+                    <City />
+                  </div>
                   <div className="opacity-50">country</div>
-                  <div className="">united kingdom</div>
+                  <div className="">
+                    <Country />
+                  </div>
                 </div>
               </div>
               <div className=" flex md:gap-4 lg:gap-0 items-center">
@@ -63,11 +71,15 @@ const Sidebar = ({ speed }) => {
                   <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     LATITUDE
                   </div>
-                  <div className="">51.514882</div>
+                  <div className="">
+                    <Latitude />
+                  </div>
                   <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     LONGITUDE
                   </div>
-                  <div className="">-0.123563</div>
+                  <div className="">
+                    <Longitude />
+                  </div>
                   <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     INTERNAL IP
                   </div>
