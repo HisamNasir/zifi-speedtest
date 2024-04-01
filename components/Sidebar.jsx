@@ -17,9 +17,10 @@ const Sidebar = ({ speed }) => {
   const dispatch = useDispatch();
   const sidebarOpen = useSelector(selectIsSidebarOpen);
   const controls = useAnimation();
-  const handleCloseSidebar = () => {
+
+  const handleCloseSidebar = async () => {
+    await controls.start({ x: "-100%" });
     dispatch(toggleSidebar());
-    controls.start({ x: "-100%" });
   };
 
   useEffect(() => {

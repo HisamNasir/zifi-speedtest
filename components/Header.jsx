@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import CountryFlag from "./CountryFlag";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "../store/sidebarSlice";
@@ -11,16 +12,13 @@ const Header = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768); // 768px is the breakpoint for 'md'
+      setIsSmallScreen(window.innerWidth < 768);
     };
 
-    // Initial check
     handleResize();
 
-    // Event listener for window resize
     window.addEventListener("resize", handleResize);
 
-    // Cleanup
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -29,35 +27,35 @@ const Header = () => {
   };
 
   return (
-    <div className="relative max-md:space-y-[44px] ">
-      <div className=" grid grid-flow-col items-center">
-        <div className="block md:hidden w-[20px] ">
+    <div className="relative max-md:space-y-[44px]">
+      <div className="grid grid-flow-col items-center">
+        <div className="block md:hidden w-[20px]">
           {sidebarOpen && (
             <button className="w-fit" onClick={handleCloseSidebar}>
               <img
                 src="/Logos-icons/Arrow Back W Web.svg"
                 alt="BACK"
-                className="w-[20px]  h-auto"
+                className="w-[20px] h-auto"
               />
             </button>
           )}
         </div>
-        <div className=" flex max-md:justify-center">
+        <div className="flex max-md:justify-center">
           <img
             src="/Logos-icons/ZiFi W.svg"
             width={96}
             height={50}
-            className=" w-auto h-[25px] md:h-8 2xl:h-[50px]"
+            className="w-auto h-[25px] md:h-8 2xl:h-[50px]"
           />
         </div>
-        <div className="text-center hidden md:block text-xs md:text-sm xl:text-base 2xl:text-lg">
+        <div className="text-center hidden md:block text-xs md:text-sm">
           {isSmallScreen
             ? sidebarOpen
               ? "More Information"
               : "Your internet speed"
             : "Your internet speed"}
         </div>
-        <div className=" flex justify-end">
+        <div className="flex justify-end">
           <CountryFlag />
         </div>
       </div>
