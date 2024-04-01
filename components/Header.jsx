@@ -50,7 +50,7 @@ const Header = () => {
             className=" w-auto h-[25px] md:h-8 2xl:h-[50px]"
           />
         </div>
-        <div className="text-center hidden md:block text-xs md:text-sm">
+        <div className="text-center hidden md:block text-xs md:text-sm xl:text-base 2xl:text-lg">
           {isSmallScreen
             ? sidebarOpen
               ? "More Information"
