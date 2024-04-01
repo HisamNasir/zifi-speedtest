@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import Sidebar from "@/components/Sidebar";
-import { Lato } from "next/font/google";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar, selectIsSidebarOpen } from "../store/sidebarSlice";
-const inter = Lato({
-  subsets: ["latin"],
-  weight: "100",
-});
+
 export default function Home() {
   const [speed, setSpeed] = useState("0");
   const [showMoreInfo, setShowMoreInfo] = useState(false);
@@ -46,7 +42,7 @@ export default function Home() {
       <Layout>
         <div className=" h-full flex flex-col justify-between ">
           <div className="flex max-md:flex-col max-h-min justify-center md:justify-end items-center">
-            <p className=" text-[150px] md:text-[150px] lg:text-[200px] 2xl:text-[343px] p-0 leading-none mb-2 md:pb-10">
+            <p className=" text-[150px] md:text-[150px] lg:text-[200px] 2xl:text-[343px] p-0 leading-none md:pb-2">
               {Math.floor(parseFloat(speed))}
             </p>
 
