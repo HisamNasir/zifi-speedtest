@@ -6,8 +6,11 @@
 body{
     font-family: "Lato", sans-serif;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 0.2em;
+    
 }
 button{
-    letter-spacing: 3px;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }

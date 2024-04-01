@@ -19,7 +19,7 @@ const CountryFlag = () => {
       {countryCode && hasFlag(countryCode) && (
         <div className="h-[25px] w-[25px] md:h-[35px] md:w-[35px] 2xl:h-[50px] 2xl:w-[50px]">
           <Image
-            className=" aspect-square rounded-md object-cover"
+            className=" aspect-square rounded-md md:rounded-xl object-cover"
             width={50}
             height={50}
             alt={countryCode}

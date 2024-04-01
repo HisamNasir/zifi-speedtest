@@ -154,7 +154,7 @@ const Sidebar = ({ speed }) => {
                     </p>
                     <img
                       src="/Logos-icons/ZIFI Download Arrow Green.svg"
-                      className=" h-3 sm:h-3 sm:max-h-[27px] w-auto md:max-h-[20px] md:max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  "
+                      className="max-h-3 sm:max-h-[27px] w-auto md:max-h-[20px] md:max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  "
                     />
                   </div>
                 </div>
@@ -176,7 +176,7 @@ const Sidebar = ({ speed }) => {
                     </p>
                     <img
                       src="/Logos-icons/ZIFI Upload Arrow Purple.svg"
-                      className=" h-3 sm:max-h-[27px] w-auto md:max-h-[20px] md:max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  "
+                      className=" max-h-3 sm:max-h-[27px] w-auto md:max-h-[20px] md:max-w-[20px] lg:max-h-[40px] lg:max-w-[40px] 2xl:max-h-[50px] 2xl:max-w-[50px]  "
                     />
                   </div>
                 </div>
