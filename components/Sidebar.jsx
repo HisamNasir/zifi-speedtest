@@ -16,18 +16,17 @@ import City from "./InternetInformation/City";
 const Sidebar = ({ speed }) => {
   const dispatch = useDispatch();
   const sidebarOpen = useSelector(selectIsSidebarOpen);
-  const controls = useAnimation(); // Initialize controls for animation
-
+  const controls = useAnimation();
   const handleCloseSidebar = () => {
     dispatch(toggleSidebar());
-    controls.start({ x: "-100%" }); // Slide back to left when closing sidebar
+    controls.start({ x: "-100%" });
   };
 
   useEffect(() => {
     if (sidebarOpen) {
-      controls.start({ x: 0 }); // Slide in from left when sidebar opens
+      controls.start({ x: 0 });
     } else {
-      controls.start({ x: "-100%" }); // Slide back to left when sidebar closes
+      controls.start({ x: "-100%" });
     }
   }, [sidebarOpen, controls]);
 
@@ -36,8 +35,8 @@ const Sidebar = ({ speed }) => {
       className={`sidebar ${
         sidebarOpen ? "" : "hidden"
       } h-full absolute top-0 left-0  z-10 w-full`}
-      initial={{ x: "-100%" }} // Initial position (off-screen to the left)
-      animate={controls} // Animation controlled by `controls` object
+      initial={{ x: "-100%" }}
+      animate={controls}
       transition={{ duration: 0.5 }}
     >
       <div className="h-full top-0 left-0  z-10 w-full md:bg-opacity-90 flex flex-col justify-between min-h-screen pb-[24px] pt-[12px] md:py-6 2xl:py-[40px] px-[18px] md:px-8 2xl:px-[50px] bg-black ">
