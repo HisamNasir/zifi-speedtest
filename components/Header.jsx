@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <div className="relative max-md:space-y-[44px]">
+    <div className="relative max-md:space-y-[44px] text-xs md:text-sm 2xl:text-xl">
       <div className="grid grid-flow-col items-center">
         <div className="block md:hidden w-[20px]">
           {sidebarOpen && (
@@ -48,7 +48,7 @@ const Header = () => {
             className="w-auto h-[25px] md:h-8 2xl:h-[50px]"
           />
         </div>
-        <div className="text-center hidden md:block text-xs md:text-sm">
+        <div className="text-center hidden md:block ">
           {isSmallScreen
             ? sidebarOpen
               ? "More Information"
@@ -61,7 +61,7 @@ const Header = () => {
       </div>
       <div
         id="changeingtext"
-        className="absolute w-full text-center md:hidden block text-xs md:text-sm"
+        className="absolute w-full text-center md:hidden block "
       >
         {isSmallScreen
           ? sidebarOpen

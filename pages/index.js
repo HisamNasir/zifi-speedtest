@@ -43,8 +43,10 @@ export default function Home() {
         <div className=" h-full flex flex-col justify-between ">
           <div className="flex max-md:flex-col max-h-min justify-center md:justify-end items-center md:gap-2 2xl:gap-4">
             <p className=" text-[150px] md:text-[150px] lg:text-[200px] 2xl:text-[380px] p-0 leading-none md:pb-4">
-              {/* {Math.floor(parseFloat(speed))} */}
-              {speed}
+              <span className=" block md:hidden">
+                {Math.floor(parseFloat(speed))}
+              </span>
+              <span className="hidden md:block">{speed}</span>
             </p>
 
             <div className=" flex flex-col justify-center gap-[48px] md:gap-2 lg:gap-6 2xl:gap-12">
@@ -58,7 +60,7 @@ export default function Home() {
                       <div className=" w-full ">
                         <p
                           onClick={toggleMoreInfo}
-                          className="w-full text-xs md:text-base lg:text-xl 2xl:text-xl cursor-pointer "
+                          className="w-full text-xs md:text-base cursor-pointer "
                         >
                           More Information
                         </p>
@@ -97,7 +99,7 @@ export default function Home() {
                   <div className="relative">
                     <p
                       onClick={toggleMoreInfo}
-                      className="absolute right-0 text-xs md:text-base lg:text-xl 2xl:text-xl flex justify-end cursor-pointer mt-10 opacity-50 hover:opacity-100 transition-opacity duration-500"
+                      className="absolute right-0 text-xs md:text-base  2xl:text-xl flex justify-end cursor-pointer mt-10 opacity-50 hover:opacity-100 transition-opacity duration-500"
                     >
                       More Information
                     </p>
