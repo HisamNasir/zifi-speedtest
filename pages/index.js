@@ -29,7 +29,7 @@ export default function Home() {
         clearInterval(interval);
         setTimeout(() => {
           setButtonImage("/Logos-icons/ZIFI Circle Test.svg");
-        }, 2000);
+        }, 50);
       }
     }, 20);
   };
