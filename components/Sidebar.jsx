@@ -19,7 +19,7 @@ const Sidebar = ({ speed }) => {
   const controls = useAnimation();
 
   const handleCloseSidebar = async () => {
-    await controls.start({ x: "-100%" });
+    await controls.start({ x: "100%" });
     dispatch(toggleSidebar());
   };
 
@@ -27,7 +27,7 @@ const Sidebar = ({ speed }) => {
     if (sidebarOpen) {
       controls.start({ x: 0 });
     } else {
-      controls.start({ x: "-100%" });
+      controls.start({ x: "100%" });
     }
   }, [sidebarOpen, controls]);
 
@@ -35,8 +35,8 @@ const Sidebar = ({ speed }) => {
     <motion.div
       className={`sidebar ${
         sidebarOpen ? "" : "hidden"
-      } h-full absolute top-0 left-0  z-10 w-full`}
-      initial={{ x: "-100%" }}
+      } h-full absolute top-0 right-0  z-10 w-full`}
+      initial={{ x: "100%" }}
       animate={controls}
       transition={{ duration: 0.5 }}
     >
