@@ -40,7 +40,7 @@ const Sidebar = ({ speed }) => {
       animate={controls}
       transition={{ duration: 0.5 }}
     >
-      <div className="h-full top-0 left-0  z-10 w-full md:bg-opacity-90 flex flex-col justify-between min-h-screen pb-[24px] pt-[12px] md:py-6 2xl:py-[40px] px-[18px] md:px-8 2xl:px-[50px] bg-black ">
+      <div className="h-full top-0 left-0  z-10 w-full md:bg-opacity-90 flex flex-col justify-between min-h-[100dvh] pb-[24px] pt-[12px] md:py-6 2xl:py-[40px] px-[18px] md:px-8 2xl:px-[50px] bg-black ">
         <Header handleCloseSidebar={handleCloseSidebar} />
         <div className=" h-full max-lg:py-[30px] max-md:pb-[0px] md:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col-reverse items-center justify-between w-full h-full ">
