@@ -78,7 +78,7 @@ const Sidebar = ({ speed }) => {
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-[2px] md:gap-1 2xl:gap-4 gap-x-6 md:gap-x-10 2xl:gap-x-20">
-                  <div className="opacity-50 w-[120px] sm:w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50 w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     LATITUDE
                   </div>
                   <div className="">
