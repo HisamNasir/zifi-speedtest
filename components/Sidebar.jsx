@@ -44,7 +44,7 @@ const Sidebar = ({ speed }) => {
         <Header handleCloseSidebar={handleCloseSidebar} />
         <div className=" h-full max-lg:py-[30px] max-md:pb-[0px] md:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col-reverse items-center justify-between w-full h-full ">
-            <div className=" w-full h-full flex flex-col max-md:mt-2 justify-between  md:justify-around text-[9px] sm:text-[11px] md:text-xs lg:text-sm 2xl:text-xl 2xl:pb-4 max-sm:tracking-[0.2em]">
+            <div className=" overflow-y-scroll  w-full h-full flex flex-col max-md:mt-2 justify-between  md:justify-around text-[9px] sm:text-[11px] md:text-xs lg:text-sm 2xl:text-xl 2xl:pb-4 max-sm:tracking-[0.2em]">
               <p className="hidden md:block opacity-50">more information</p>
               <button className=" hidden md:block" onClick={handleCloseSidebar}>
                 <img
@@ -150,7 +150,7 @@ const Sidebar = ({ speed }) => {
               </div>
             </div>
             {/* right side  */}
-            <div className=" flex max-md:justify-center max-md:items-center flex-col max-md:my-4 max-md:mb-8 gap-4 lg:gap-8 2xl:gap-10 items-end w-full ">
+            <div className="flex max-md:justify-center max-md:items-center flex-col max-md:my-4 max-md:mb-8 gap-4 lg:gap-8 2xl:gap-10 items-end w-full max-sm:tracking-[0.0rem]">
               <div id="download">
                 <div className="flex max-md:flex-col max-md:justify-center md:items-center leading-none">
                   <p className=" text-[108px] md:text-[80px] lg:text-[120px] 2xl:text-[196px] leading-none">
