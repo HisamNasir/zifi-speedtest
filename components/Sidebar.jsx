@@ -54,11 +54,11 @@ const Sidebar = ({ speed }) => {
                 />
               </button>
               <div className=" flex md:gap-4 lg:gap-0 items-center">
-                <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]">
+                <div className="w-[48px] sm:w-[55px] lg:w-[65px] 2xl:w-[80px]">
                   <CountryFlag />
                 </div>
                 <div className="grid grid-cols-2 gap-[2px] md:gap-1 2xl:gap-4 gap-x-6 md:gap-x-10 2xl:gap-x-20">
-                  <div className=" opacity-50 w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className=" opacity-50 w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     city
                   </div>
                   <div className="">
@@ -71,34 +71,34 @@ const Sidebar = ({ speed }) => {
                 </div>
               </div>
               <div className=" flex md:gap-4 lg:gap-0 items-center">
-                <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]">
+                <div className=" w-[48px] sm:w-[55px] lg:w-[65px] 2xl:w-[80px]">
                   <img
                     src="/Logos-icons/ZIFI User Icon.svg"
                     className="w-full h-auto max-w-[25px] md:max-h-[35px] 2xl:max-h-[50px] 2xl:max-w-[50px]"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-[2px] md:gap-1 2xl:gap-4 gap-x-6 md:gap-x-10 2xl:gap-x-20">
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50 w-[120px] sm:w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     LATITUDE
                   </div>
                   <div className="">
                     <Latitude />
                   </div>
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     LONGITUDE
                   </div>
                   <div className="">
                     <Longitude />
                   </div>
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     INTERNAL IP
                   </div>
                   <div className="">10.0.0.186</div>
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     EXTERNAL IP
                   </div>
                   <div className="">82.41.174.63</div>
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     MAC ADDRESS
                   </div>
                   <div className="">5D:C3:07:7A:C4:88</div>
@@ -106,41 +106,41 @@ const Sidebar = ({ speed }) => {
               </div>
 
               <div className=" flex md:gap-4 lg:gap-0 items-center">
-                <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]">
+                <div className="w-[48px] sm:w-[55px] lg:w-[65px] 2xl:w-[80px]">
                   <img
                     src="/Logos-icons/ZIFI WiFi Icon W.svg"
                     className="max-w-[21px]   h-auto md:w-auto md:max-h-[35px] 2xl:max-h-[50px] 2xl:max-w-[50px]"
                   />
                 </div>
                 <div className="grid grid-cols-2 gap-[2px] md:gap-1 2xl:gap-4 gap-x-6 md:gap-x-10 2xl:gap-x-20">
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     PROVIDER
                   </div>
                   <div className="">VIRGIN MEDIA</div>
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     ROUTER NAME
                   </div>
                   <div className="">TP LINK</div>
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     SERVER
                   </div>
                   <div className="">LONDON</div>
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     PING
                   </div>
                   <div className=" normal-case">12 ms</div>
                 </div>
               </div>
               <div className=" flex md:gap-4 lg:gap-0 items-center">
-                <div className=" w-[55px] lg:w-[65px] 2xl:w-[80px]"></div>
+                <div className="w-[48px] sm:w-[55px] lg:w-[65px] 2xl:w-[80px]"></div>
                 <div className="grid grid-cols-2 gap-[2px] md:gap-1 2xl:gap-4 gap-x-6 md:gap-x-10 2xl:gap-x-20">
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     DATE
                   </div>
                   <div className="">
                     <ShortDate />
                   </div>
-                  <div className="opacity-50  w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
+                  <div className="opacity-50  w-[120px] sm:w-[126px] md:w-[150px] lg:w-[250px] 2xl:w-[270px]">
                     TIME
                   </div>
                   <div className="">
