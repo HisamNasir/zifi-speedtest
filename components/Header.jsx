@@ -41,12 +41,14 @@ const Header = () => {
           )}
         </div>
         <div className="flex max-md:justify-center">
-          <img
-            src="/Logos-icons/ZiFi W.svg"
-            width={96}
-            height={50}
-            className="w-auto h-[25px] md:h-8 2xl:h-[50px]"
-          />
+          <a href="/">
+            <img
+              src="/Logos-icons/ZiFi W.svg"
+              width={96}
+              height={50}
+              className="w-auto h-[25px] md:h-8 2xl:h-[50px]"
+            />
+          </a>
         </div>
         <div className="text-center hidden md:block ">
           {isSmallScreen
