@@ -53,14 +53,14 @@ export default function Home() {
               <p className=" max-md:text-center normal-case text-[32px] md:text-[25px] lg:tex-[35px] 2xl:text-[45px] leading-none">
                 Mbps
               </p>
-              <div className=" block md:hidden ">
+              <div className=" block md:hidden h-[16px]">
                 {speed === "105.31" && (
                   <div className="h-[16px]">
                     {!sidebarOpen && (
                       <div className=" w-full ">
                         <p
                           onClick={toggleMoreInfo}
-                          className="w-full text-xs md:text-base cursor-pointer "
+                          className="w-full text-xs md:text-base cursor-pointer"
                         >
                           More Information
                         </p>
