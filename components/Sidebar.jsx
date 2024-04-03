@@ -44,7 +44,7 @@ const Sidebar = ({ speed }) => {
         <Header handleCloseSidebar={handleCloseSidebar} />
         <div className=" h-full max-lg:py-[30px] max-md:pb-[0px] md:my-2 max-h-[80vh] overflow-auto">
           <div className="flex max-md:flex-col-reverse items-center justify-between w-full h-full ">
-            <div className=" overflow-y-scroll  w-full h-full flex flex-col max-md:mt-2 justify-between  md:justify-around text-[9px] sm:text-[11px] md:text-xs lg:text-sm 2xl:text-xl 2xl:pb-4 max-sm:tracking-[0.2em]">
+            <div className=" max-sm:overflow-y-scroll  w-full h-full flex flex-col max-md:mt-2 justify-between  md:justify-around text-[9px] sm:text-[11px] md:text-xs lg:text-sm 2xl:text-xl 2xl:pb-4 max-sm:tracking-[0.2em]">
               <p className="hidden md:block opacity-50">more information</p>
               <button className=" hidden md:block" onClick={handleCloseSidebar}>
                 <img
