@@ -7,6 +7,7 @@ import {
   checkOnlineStatus,
   selectUserStatus,
 } from "../store/onlineStatusSlice"; // Import the checkOnlineStatus and selectUserStatus
+import NoInternet from "@/components/NoInternet";
 
 export default function Dashboard() {
   const [speed, setSpeed] = useState("0");
@@ -18,7 +19,8 @@ export default function Dashboard() {
   const userStatus = useSelector(selectUserStatus);
   const handleButtonClick = () => {
     dispatch(checkOnlineStatus()); // Check user status every time the button is clicked
-    if (userStatus === "online") {
+    if (userStatus) {
+      // If user is online, perform action
       setButtonImage("/Logos-icons/ZIFI Circle Download Green.svg");
       let initialSpeed = 0;
       const interval = setInterval(() => {
@@ -32,8 +34,12 @@ export default function Dashboard() {
           }, 50);
         }
       }, 20);
+    } else {
+      // If user is offline, do not perform action
+      console.log("User is offline. Cannot perform action.");
     }
   };
+
   useEffect(() => {
     dispatch(checkOnlineStatus()); // Check user status when the component mounts
   }, [dispatch]);
