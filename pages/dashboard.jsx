@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
 import Sidebar from "@/components/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,11 +11,6 @@ export default function Dashboard() {
   );
   const dispatch = useDispatch();
   const sidebarOpen = useSelector(selectIsSidebarOpen);
-
-  const handleToggleSidebar = () => {
-    dispatch(toggleSidebar());
-  };
-
   const handleButtonClick = () => {
     setButtonImage("/Logos-icons/ZIFI Circle Download Green.svg");
     let initialSpeed = 0;
@@ -32,9 +27,8 @@ export default function Dashboard() {
     }, 20);
   };
   const toggleMoreInfo = () => {
-    dispatch(toggleSidebar()); // Open sidebar when showing information
+    dispatch(toggleSidebar());
   };
-
   return (
     <main>
       <Layout>
@@ -74,7 +68,7 @@ export default function Dashboard() {
               >
                 <div className=" absolute">
                   {buttonImage === "/Logos-icons/ZIFI Circle Test.svg" && (
-                    <p className=" flex justify-center items-center  uppercase text-[30px] md:text-base lg:text-xl 2xl:text-[35px] w-[104px] md:w-[60px] lg:w-[80px] 2xl:w-[130px] h-[104px] md:h-[60px] lg:h-[80px] 2xl:h-[130px]">
+                    <p className=" flex justify-center items-center  uppercase text-[30px] md:text-base lg:text-xl 2xl:text-[35px] w-[104px] md:w-[40px] lg:w-[80px] 2xl:w-[130px] h-[104px] md:h-[40px] lg:h-[80px] 2xl:h-[130px]">
                       Go
                     </p>
                   )}
@@ -82,7 +76,7 @@ export default function Dashboard() {
                 <img
                   src={buttonImage}
                   alt="Button"
-                  className=" w-[104px] md:w-[60px] lg:w-[80px] 2xl:w-[130px] h-[104px] md:h-[60px] lg:h-[80px] 2xl:h-[130px] "
+                  className=" w-[104px] md:w-[40px] lg:w-[80px] 2xl:w-[130px] h-[104px] md:h-[40px] lg:h-[80px] 2xl:h-[130px] "
                   id="imageButton"
                 />
               </button>
