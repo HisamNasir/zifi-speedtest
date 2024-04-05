@@ -16,7 +16,22 @@ const CheckInternet = () => {
       window.removeEventListener("offline", handleOnlineStatusChange);
     };
   }, []);
-
+  const openNetworkSettings = () => {
+    if (/android/i.test(navigator.userAgent)) {
+      // Open network settings on Android
+      window.location.href = "intent://networksettings#Intent;end";
+    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      // Open network settings on iOS
+      window.location.href = "prefs:root=WIFI";
+    } else if (/Macintosh/i.test(navigator.userAgent)) {
+      // Open network settings on macOS
+      window.location.href =
+        "x-apple.systempreferences:com.apple.preferences.network";
+    } else {
+      // For other platforms, provide a general message
+      alert("Network settings are not supported on this platform.");
+    }
+  };
   return (
     <div className={!isOnline ? "block" : "hidden"}>
       <div className="sidebar h-full absolute top-0 right-0  z-10 w-full  text-xs md:text-sm 2xl:text-xl text-white">
@@ -48,7 +63,10 @@ const CheckInternet = () => {
                   className="h-auto w-[8px] md:w-[14px] 2xl:w-[18px]"
                 />
               </div>
-              <p className="text-center opacity-50 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+              <p
+                className="text-center opacity-50 hover:opacity-100 transition-opacity duration-200 cursor-pointer"
+                onClick={openNetworkSettings}
+              >
                 internet settings
               </p>
             </div>
