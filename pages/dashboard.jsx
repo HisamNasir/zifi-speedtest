@@ -1,13 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import Sidebar from "@/components/Sidebar";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar, selectIsSidebarOpen } from "../store/sidebarSlice";
-import {
-  checkOnlineStatus,
-  selectUserStatus,
-} from "../store/onlineStatusSlice"; // Import the checkOnlineStatus and selectUserStatus
-import NoInternet from "@/components/NoInternet";
 
 export default function Dashboard() {
   const [speed, setSpeed] = useState("0");
@@ -16,34 +11,26 @@ export default function Dashboard() {
   );
   const dispatch = useDispatch();
   const sidebarOpen = useSelector(selectIsSidebarOpen);
-  const userStatus = useSelector(selectUserStatus);
-  const handleButtonClick = () => {
-    dispatch(checkOnlineStatus()); // Check user status every time the button is clicked
-    if (userStatus) {
-      // If user is online, perform action
-      setButtonImage("/Logos-icons/ZIFI Circle Download Green.svg");
-      let initialSpeed = 0;
-      const interval = setInterval(() => {
-        initialSpeed += 1.0;
-        const roundedSpeed = Math.min(initialSpeed, 105.31).toFixed(2);
-        setSpeed(roundedSpeed);
-        if (initialSpeed >= 105.31) {
-          clearInterval(interval);
-          setTimeout(() => {
-            setButtonImage("/Logos-icons/ZIFI Circle Test.svg");
-          }, 50);
-        }
-      }, 20);
-    } else {
-      // If user is offline, do not perform action
-      console.log("User is offline. Cannot perform action.");
-    }
+
+  const handleToggleSidebar = () => {
+    dispatch(toggleSidebar());
   };
 
-  useEffect(() => {
-    dispatch(checkOnlineStatus()); // Check user status when the component mounts
-  }, [dispatch]);
-
+  const handleButtonClick = () => {
+    setButtonImage("/Logos-icons/ZIFI Circle Download Green.svg");
+    let initialSpeed = 0;
+    const interval = setInterval(() => {
+      initialSpeed += 1.0;
+      const roundedSpeed = Math.min(initialSpeed, 105.31).toFixed(2);
+      setSpeed(roundedSpeed);
+      if (initialSpeed >= 105.31) {
+        clearInterval(interval);
+        setTimeout(() => {
+          setButtonImage("/Logos-icons/ZIFI Circle Test.svg");
+        }, 50);
+      }
+    }, 20);
+  };
   const toggleMoreInfo = () => {
     dispatch(toggleSidebar()); // Open sidebar when showing information
   };
@@ -87,7 +74,7 @@ export default function Dashboard() {
               >
                 <div className=" absolute">
                   {buttonImage === "/Logos-icons/ZIFI Circle Test.svg" && (
-                    <p className=" flex justify-center items-center  uppercase text-[30px] md:text-base lg:text-xl 2xl:text-[35px] w-[104px] md:w-[40px] lg:w-[80px] 2xl:w-[130px] h-[104px] md:h-[40px] lg:h-[80px] 2xl:h-[130px]">
+                    <p className=" flex justify-center items-center  uppercase text-[30px] md:text-base lg:text-xl 2xl:text-[35px] w-[104px] md:w-[60px] lg:w-[80px] 2xl:w-[130px] h-[104px] md:h-[60px] lg:h-[80px] 2xl:h-[130px]">
                       Go
                     </p>
                   )}
@@ -95,7 +82,7 @@ export default function Dashboard() {
                 <img
                   src={buttonImage}
                   alt="Button"
-                  className=" w-[104px] md:w-[40px] lg:w-[80px] 2xl:w-[130px] h-[104px] md:h-[40px] lg:h-[80px] 2xl:h-[130px] "
+                  className=" w-[104px] md:w-[60px] lg:w-[80px] 2xl:w-[130px] h-[104px] md:h-[60px] lg:h-[80px] 2xl:h-[130px] "
                   id="imageButton"
                 />
               </button>

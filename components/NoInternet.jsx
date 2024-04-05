@@ -1,21 +1,21 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectIsOnline } from "../store/onlineStatusSlice";
-import Header from "./Header";
-import Footer from "./Footer";
-import { motion } from "framer-motion";
+// import { useSelector } from "react-redux";
+// import { selectIsOnline } from "../store/onlineStatusSlice";
+// import Header from "./Header";
+// import Footer from "./Footer";
+// import { motion } from "framer-motion";
 
 const NoInternet = () => {
-  const isOnline = useSelector(selectIsOnline);
+  // const isOnline = useSelector(selectIsOnline);
 
-  // Render null on the server-side to prevent hydration mismatch
-  if (typeof window === "undefined") {
-    return null;
-  }
+  // // Render null on the server-side to prevent hydration mismatch
+  // if (typeof window === "undefined") {
+  //   return null;
+  // }
 
-  if (isOnline) {
-    return null; // Render nothing if user is online
-  }
+  // if (isOnline) {
+  //   return null; // Render nothing if user is online
+  // }
 
   return (
     <div className="sidebar h-full absolute top-0 right-0  z-10 w-full  text-xs md:text-sm 2xl:text-xl text-white">
