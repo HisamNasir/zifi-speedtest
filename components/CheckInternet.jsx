@@ -36,9 +36,11 @@ const CheckInternet = () => {
                 height={244}
                 className="h-auto w-[140px] md:w-[200px] 2xl:w-[244px] max-h-[40px] overflow-hidden object-cover flex items-center"
               />
-              <p>no internet connection</p>
-              <div className="flex gap-2">
-                <p>check your connection or try again </p>
+              <p className="text-center">no internet connection</p>
+              <div className="flex gap-2 text-center justify-center ">
+                <p className="text-center">
+                  check your connection or try again{" "}
+                </p>
                 <img
                   src="/Logos-icons/Refresh - No Internet Connection.svg"
                   width={18}
