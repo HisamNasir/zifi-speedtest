@@ -48,7 +48,7 @@ const CheckInternet = () => {
                   className="h-auto w-[8px] md:w-[14px] 2xl:w-[18px]"
                 />
               </div>
-              <p className=" opacity-50 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
+              <p className="text-center opacity-50 hover:opacity-100 transition-opacity duration-200 cursor-pointer">
                 internet settings
               </p>
             </div>
