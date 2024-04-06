@@ -20,8 +20,8 @@ const CheckInternet = () => {
     // Open network settings window
     const userAgent = navigator.userAgent.toLowerCase();
     if (/android/.test(userAgent)) {
-      // If user is on Android, open network settings
-      window.open("settings://wifi", "_blank");
+      const intent = new Intent(Settings.ACTION_WIFI_SETTINGS);
+      startActivity(intent);
     } else {
       // For other platforms, open the network settings using a generic URL
       window.open("ms-settings:network", "_blank");
