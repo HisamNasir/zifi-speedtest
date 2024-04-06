@@ -17,21 +17,36 @@ const CheckInternet = () => {
     };
   }, []);
   const openNetworkSettings = () => {
-    if (/android/i.test(navigator.userAgent)) {
-      // Open network settings on Android
-      window.location.href = "intent://networksettings#Intent;end";
-    } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      // Open network settings on iOS
-      window.location.href = "prefs:root=WIFI";
-    } else if (/Macintosh/i.test(navigator.userAgent)) {
-      // Open network settings on macOS
-      window.location.href =
-        "x-apple.systempreferences:com.apple.preferences.network";
+    // Open network settings based on the platform
+    const platform = window.navigator.platform.toLowerCase();
+
+    if (platform.includes("win")) {
+      // Windows
+      window.open("ms-settings:network", "_blank");
+    } else if (platform.includes("mac")) {
+      // Mac OS
+      window.open(
+        "x-apple.systempreferences:com.apple.preference.network",
+        "_blank"
+      );
+    } else if (platform.includes("linux")) {
+      // Linux (GNOME desktop)
+      window.open("gnome-control-center network", "_blank");
+    } else if (platform.includes("android")) {
+      // Android
+      window.open(
+        "intent://#Intent;action=android.settings.WIRELESS_SETTINGS;end",
+        "_blank"
+      );
+    } else if (platform.includes("iphone") || platform.includes("ipad")) {
+      // iOS
+      window.open("prefs:root=WIFI", "_blank");
     } else {
-      // For other platforms, provide a general message
-      alert("Network settings are not supported on this platform.");
+      // Fallback for other platforms
+      console.log("Network settings not supported on this platform.");
     }
   };
+
   return (
     <div className={!isOnline ? "block" : "hidden"}>
       <div className="sidebar h-full absolute top-0 right-0  z-10 w-full  text-xs md:text-sm 2xl:text-xl text-white">
