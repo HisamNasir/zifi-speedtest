@@ -17,33 +17,14 @@ const CheckInternet = () => {
     };
   }, []);
   const openNetworkSettings = () => {
-    // Open network settings based on the platform
-    const platform = window.navigator.platform.toLowerCase();
-
-    if (platform.includes("win")) {
-      // Windows
+    // Open network settings window
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (/android/.test(userAgent)) {
+      // If user is on Android, open network settings
+      window.open("settings://wifi", "_blank");
+    } else {
+      // For other platforms, open the network settings using a generic URL
       window.open("ms-settings:network", "_blank");
-    } else if (platform.includes("mac")) {
-      // Mac OS
-      window.open(
-        "x-apple.systempreferences:com.apple.preference.network",
-        "_blank"
-      );
-    } else if (platform.includes("android")) {
-      // Android
-      window.location.href =
-        "intent:#Intent;action=android.settings.WIFI_SETTINGS;end";
-    } else if (platform.includes("iphone") || platform.includes("ipad")) {
-      // iOS
-      window.open("prefs:root=WIFI", "_blank");
-    }
-    // else if (platform.includes("linux")) {
-    //   // Linux
-    //   window.open("gnome-control-center network", "_blank");
-    // }
-    else {
-      // Fallback for other platforms
-      console.log("Network settings not supported on this platform.");
     }
   };
 
