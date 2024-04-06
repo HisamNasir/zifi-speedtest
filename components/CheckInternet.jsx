@@ -21,7 +21,9 @@ const CheckInternet = () => {
     const userAgent = navigator.userAgent.toLowerCase();
     if (/android/.test(userAgent)) {
       // If user is on Android, open network settings
-      window.open("settings://wifi", "_blank");
+      window.open(
+        "https://play.google.com/store/apps/details?id=us.zoom.videomeetings"
+      );
     } else {
       // For other platforms, open the network settings using a generic URL
       window.open("ms-settings:network", "_blank");
