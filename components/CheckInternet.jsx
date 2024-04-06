@@ -16,6 +16,9 @@ const CheckInternet = () => {
       window.removeEventListener("offline", handleOnlineStatusChange);
     };
   }, []);
+  const refreshPage = () => {
+    window.location.reload(); // Refresh the current page
+  };
   const openNetworkSettings = () => {
     // Open network settings window
     const userAgent = navigator.userAgent.toLowerCase();
@@ -50,7 +53,10 @@ const CheckInternet = () => {
                 className="h-auto w-[140px] md:w-[200px] 2xl:w-[244px] max-h-[40px] overflow-hidden object-cover flex items-center"
               />
               <p className="text-center">no internet connection</p>
-              <div className="flex gap-2 text-center justify-center ">
+              <div
+                onClick={refreshPage}
+                className="flex gap-2 text-center justify-center "
+              >
                 <p className="text-center">
                   check your connection or try again{" "}
                 </p>
