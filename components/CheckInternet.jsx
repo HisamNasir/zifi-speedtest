@@ -36,10 +36,12 @@ const CheckInternet = () => {
     } else if (platform.includes("iphone") || platform.includes("ipad")) {
       // iOS
       window.open("prefs:root=WIFI", "_blank");
-    } else if (platform.includes("linux")) {
-      // Linux
-      window.open("gnome-control-center network", "_blank");
-    } else {
+    }
+    // else if (platform.includes("linux")) {
+    //   // Linux
+    //   window.open("gnome-control-center network", "_blank");
+    // }
+    else {
       // Fallback for other platforms
       console.log("Network settings not supported on this platform.");
     }
