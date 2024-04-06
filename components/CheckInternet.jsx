@@ -34,8 +34,7 @@ const CheckInternet = () => {
       );
     } else if (platform.includes("android")) {
       // Android
-      window.location.href =
-        "intent:#Intent;action=android.settings.WIFI_SETTINGS;end";
+      url = "https://www.google.com/search?q=network+settings";
     } else if (platform.includes("iphone") || platform.includes("ipad")) {
       // iOS
       window.open("prefs:root=WIFI", "_blank");
