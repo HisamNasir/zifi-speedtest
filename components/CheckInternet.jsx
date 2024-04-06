@@ -31,10 +31,8 @@ const CheckInternet = () => {
       );
     } else if (platform.includes("android")) {
       // Android
-      window.open(
-        "intent://#Intent;action=android.settings.WIRELESS_SETTINGS;end",
-        "_blank"
-      );
+      window.location.href =
+        "intent:#Intent;action=android.settings.WIFI_SETTINGS;end";
     } else if (platform.includes("iphone") || platform.includes("ipad")) {
       // iOS
       window.open("prefs:root=WIFI", "_blank");
