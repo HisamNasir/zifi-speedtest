@@ -70,20 +70,20 @@ const CheckInternet = () => {
                 className="h-auto w-[140px] md:w-[200px] 2xl:w-[244px] max-h-[40px] overflow-hidden object-cover flex items-center"
               />
               <p className="text-center">no internet connection</p>
-              <div
+              <p
                 onClick={refreshPage}
-                className="flex gap-2 text-center justify-center "
+                className="flex gap-2 text-center justify-center cursor-pointer "
               >
-                <p className="text-center">
-                  check your connection or try again{" "}
-                </p>
-                <img
-                  src="/Logos-icons/Refresh - No Internet Connection.svg"
-                  width={18}
-                  height={18}
-                  className="h-auto w-[8px] md:w-[14px] 2xl:w-[18px]"
-                />
-              </div>
+                check your connection or try again{" "}
+                <span>
+                  <img
+                    src="/Logos-icons/Refresh - No Internet Connection.svg"
+                    width={18}
+                    height={18}
+                    className="h-auto w-[8px] md:w-[14px] 2xl:w-[18px]"
+                  />
+                </span>
+              </p>
               <p
                 className="text-center opacity-50 hover:opacity-100 transition-opacity duration-200 cursor-pointer"
                 onClick={openNetworkSettings}
